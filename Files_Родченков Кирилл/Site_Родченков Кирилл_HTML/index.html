@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METASHPERE — Единый сайт</title>
+    
+    <!-- Подключаем Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Шрифт Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Наш CSS файл -->
+    <link rel="stylesheet" href="Site_css/styleindex.css">
+</head>
+<body class="main-bg" id="main-body">
+
+    <!-- Боковые точки навигации -->
+    <div class="progress-dots d-none d-lg-flex">
+        <div class="dot active" onclick="scrollToSection(0)"></div>
+        <div class="dot" onclick="scrollToSection(1)"></div>
+        <div class="dot" onclick="scrollToSection(2)"></div>
+    </div>
+
+    <!-- Декоративные элементы для страницы 404 -->
+    <div class="triangle triangle-1 hidden"></div>
+    <div class="triangle triangle-2 hidden"></div>
+    <div class="triangle triangle-3 hidden"></div>
+    <div class="triangle triangle-4 hidden"></div>
+    <div class="triangle triangle-5 hidden"></div>
+    <div class="circle circle-1 hidden"></div>
+    <div class="circle circle-2 hidden"></div>
+
+    <!-- Первая навигация (верхняя) -->
+    <header id="top-header">
+        <div class="nav-inner">
+            <a href="#" class="logo">METASPHERE</a>
+
+            <nav>
+    <ul>
+        <li><a href="index.html" onclick="showMainPage(); return false;">Главная</a></li>
+        <li><a href="mainpage.html">Преимущества</a></li>
+        <li><a href="flexible.html">Возможности</a></li>
+        <li><a href="Boot.html">FAQ</a></li>
+        <li><a href="#" onclick="showMainPage(); return false;">Карточки</a></li>
+        <li><a href="#" onclick="showMainPage(); return false;">Статистика</a></li>
+        <li><a href="#" class="btn-login">Войти</a></li>
+        <li><a href="#" class="btn-reg">Регистрация</a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
+    <!-- ГЛАВНАЯ СТРАНИЦА С ГЕРОЕМ -->
+    <main id="hero-section">
+        <div class="hero">
+            
+            <div class="hero-text">
+                <div class="subtitle">Cyber Sport Network</div>
+
+                <h1 class="title">
+                    ИГРАЙ, РАЗВИВАЙСЯ<br>
+                    И ВЫИГРЫВАЙ<br>
+                    ВМЕСТЕ С НАМИ
+                </h1>
+
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <span>Ежедневные турниры</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <span>Уникальная рейтинговая система</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <span>Денежные призы</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <span>Развитие в любой отрасли киберспорта</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <span>Свой подход к читерству</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <span>Интересный матчмейкинг</span>
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <a href="#" class="btn-main">Присоединиться</a>
+                    <a href="#" class="btn-outline">О проекте</a>
+                </div>
+            </div>
+
+            <!-- Изображение героя -->
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="image/image 49.png" alt="Герой" class="char">
+                    
+                    <div class="floating-orb orb-1"></div>
+                    <div class="floating-orb orb-2"></div>
+                    <div class="floating-orb orb-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">Скролль чтобы увидеть больше</div>
+    </main>
+
+    <!-- Вторая навигация (фиксированная) -->
+    <nav class="navbar navbar-expand-lg navbar-dark" id="fixed-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showMainPage(); scrollToTop(); return false;">METASHPERE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="scrollToHero(); return false;">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#advantages" onclick="scrollToSection(0); return false;">Преимущества</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#capabilities" onclick="scrollToSection(1); return false;">Возможности</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq" onclick="scrollToSection(2); return false;">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#error404" onclick="show404Page(); return false;">404 Тест</a></li>
+                </ul>
+            </div>
+            <div class="d-none d-lg-flex align-items-center auth-box">
+                <a href="#" class="btn-login" onclick="return false;">Войти</a>
+                <button class="btn-register" onclick="return false;">Регистрация</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ОСНОВНОЕ СОДЕРЖАНИЕ -->
+    <div id="main-page">
+        <!-- Секция 1: Преимущества -->
+        <section id="advantages">
+            <div class="container">
+                <h1 class="section-title">Наши преимущества</h1>
+                
+                <div class="advantages-grid">
+                    <!-- Карточка 1 -->
+                    <div class="advantage-card">
+                        <h3>Получите признание комьюнити</h3>
+                        <p>Соберите фан-базу и делитесь своими достижениями! Расскажите о себе в постах и комментариях своего профиля.</p>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div class="advantage-card">
+                        <h3>Попадите в топ-пользователей</h3>
+                        <p>Развивайте свои навыки и получайте оценки и отзывы других пользователей! Вы ведь хотите стать лучшим в своей отрасли?</p>
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div class="advantage-card">
+                        <h3>Используйте возможности на максимум</h3>
+                        <p>Попробуйте себя в роли тренера, аналитика и комментатора или организуйте свой собственный турнир!</p>
+                    </div>
+
+                    <!-- Карточка 4 -->
+                    <div class="advantage-card">
+                        <h3>Монетизируйте свои навыки</h3>
+                        <p>Зарабатывайте деньги за счёт своих навыков в разных отраслях киберспорта.</p>
+                    </div>
+
+                    <!-- Стрелки -->
+                    <svg class="dashed-arrow arrow1" viewBox="0 0 200 100">
+                        <defs>
+                            <marker id="arrowhead1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                                <polygon points="0,0 8,3 0,6" fill="white"/>
+                            </marker>
+                        </defs>
+                        <path d="M20 50 Q100 20 180 50" marker-end="url(#arrowhead1)"/>
+                    </svg>
+
+                    <svg class="dashed-arrow arrow2" viewBox="0 0 100 200">
+                        <defs>
+                            <marker id="arrowhead2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                                <polygon points="0,0 8,3 0,6" fill="white"/>
+                            </marker>
+                        </defs>
+                        <path d="M50 20 Q80 100 20 180" marker-end="url(#arrowhead2)"/>
+                    </svg>
+
+                    <svg class="dashed-arrow arrow3" viewBox="0 0 200 100">
+                        <defs>
+                            <marker id="arrowhead3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                                <polygon points="0,0 8,3 0,6" fill="white"/>
+                            </marker>
+                        </defs>
+                        <path d="M180 50 Q100 80 20 50" marker-end="url(#arrowhead3)"/>
+                    </svg>
+
+                    <svg class="dashed-arrow arrow4" viewBox="0 0 100 200">
+                        <defs>
+                            <marker id="arrowhead4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                                <polygon points="0,0 8,3 0,6" fill="white"/>
+                            </marker>
+                        </defs>
+                        <path d="M50 180 Q20 100 50 20" marker-end="url(#arrowhead4)"/>
+                    </svg>
+                </div>
+
+                <div class="scroll-hint">
+                    Скролл чтобы увидеть больше
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 2: Возможности -->
+        <section id="capabilities">
+            <div class="container">
+                <h1 class="section-title">Предоставляем массу возможностей</h1>
+
+                <div class="capabilities-grid">
+                    <!-- Карточка 1: Пользователям -->
+                    <div class="capability-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Пользователям</h3>
+                        </div>
+                        
+                        <div class="card-carousel">
+                            <!-- Контент 1 -->
+                            <div class="card-content active">
+                                <div class="card-icon users">🏆</div>
+                                <p class="card-description">Выступления на турнирах с призовым фондом</p>
+                            </div>
+                            
+                            <!-- Контент 2 -->
+                            <div class="card-content">
+                                <div class="card-icon users">📊</div>
+                                <p class="card-description">Формула расчета навыка основанная на личных показателях</p>
+                            </div>
+                            
+                            <!-- Контент 3 -->
+                            <div class="card-content">
+                                <div class="card-icon users">🎯</div>
+                                <p class="card-description">Уникальные карточки профиль для пользователей</p>
+                            </div>
+                            
+                            <!-- Контент 4 -->
+                            <div class="card-content">
+                                <div class="card-icon users">📢</div>
+                                <p class="card-description">Публикация постов и новостей на своей странице</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-navigation">
+                            <button class="card-nav-btn" onclick="prevCard(0)">‹</button>
+                            <div class="card-indicators" id="indicators-0"></div>
+                            <button class="card-nav-btn" onclick="nextCard(0)">›</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 2: Организациям -->
+                    <div class="capability-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Организациям</h3>
+                        </div>
+                        
+                        <div class="card-carousel">
+                            <!-- Контент 1 -->
+                            <div class="card-content active">
+                                <div class="card-icon org">⚙️</div>
+                                <p class="card-description">Автоматизированная система проведения мероприятий</p>
+                            </div>
+                            
+                            <!-- Контент 2 -->
+                            <div class="card-content">
+                                <div class="card-icon org">📈</div>
+                                <p class="card-description">Огромное количество возможностей для настройки турниров</p>
+                            </div>
+                            
+                            <!-- Контент 3 -->
+                            <div class="card-content">
+                                <div class="card-icon org">🖼️</div>
+                                <p class="card-description">Найм пользователей из разных отраслей для проведение турниров</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-navigation">
+                            <button class="card-nav-btn" onclick="prevCard(1)">‹</button>
+                            <div class="card-indicators" id="indicators-1"></div>
+                            <button class="card-nav-btn" onclick="nextCard(1)">›</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 3: Клубам и командам -->
+                    <div class="capability-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Клубам и командам</h3>
+                        </div>
+                        
+                        <div class="card-carousel">
+                            <!-- Контент 1 -->
+                            <div class="card-content active">
+                                <div class="card-icon clubs">💎</div>
+                                <p class="card-description">Гарантированная выплата выигранных призов</p>
+                            </div>
+                            
+                            <!-- Контент 2 -->
+                            <div class="card-content">
+                                <div class="card-icon clubs">📋</div>
+                                <p class="card-description">Подписание контрактов с пользователями из разных отраслей</p>
+                            </div>
+                            
+                            <!-- Контент 3 -->
+                            <div class="card-content">
+                                <div class="card-icon clubs">🎯</div>
+                                <p class="card-description">Просмотр демо матчей для тренировок и разбора игры</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-navigation">
+                            <button class="card-nav-btn" onclick="prevCard(2)">‹</button>
+                            <div class="card-indicators" id="indicators-2"></div>
+                            <button class="card-nav-btn" onclick="nextCard(2)">›</button>
+                        </div>
+                    </div>
+
+                    <!-- Карточка 4: Аренам -->
+                    <div class="capability-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Аренам</h3>
+                        </div>
+                        
+                        <div class="card-carousel">
+                            <!-- Контент 1 -->
+                            <div class="card-content active">
+                                <div class="card-icon arena">📱</div>
+                                <p class="card-description">Удобный и информационный профиль</p>
+                            </div>
+                            
+                            <!-- Контент 2 -->
+                            <div class="card-content">
+                                <div class="card-icon arena">💡</div>
+                                <p class="card-description">Система рекомендаций позволит привлечь новых клиентов</p>
+                            </div>
+                            
+                            <!-- Контент 3 -->
+                            <div class="card-content">
+                                <div class="card-icon arena">🖥️</div>
+                                <p class="card-description">Онлайн бронирование компьютеров через наш сайт</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-navigation">
+                            <button class="card-nav-btn" onclick="prevCard(3)">‹</button>
+                            <div class="card-indicators" id="indicators-3"></div>
+                            <button class="card-nav-btn" onclick="nextCard(3)">›</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-hint">
+                    Скролл чтобы увидеть больше
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 3: FAQ -->
+        <section id="faq">
+            <div class="container">
+                <h1 class="section-title">FAQ</h1>
+
+                <div class="accordion" id="faqAccordion">
+                    <!-- Вопрос 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Чем я могу помочь в роли тестировщика?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Во время тестирования проекта, достаточно просто пользоваться всем сайтом. Делай, что тебе угодно и при нахождении багов или ошибок сообщай нам, мы будем очень признательны! А если у тебя есть опыт в тестировании проектов, то это ещё лучше!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Что ещё я получу за тестирование проекта?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                За тестирование проекта отблагодарим вас на сайте или в релизных заметках.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Я могу заниматься проведением турниров?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Если в проекте есть функционал турниров, то да, его тестирование будет вашей прямой задачей.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-hint">
+                    Вернуться наверх
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- СТРАНИЦА 404 -->
+    <section id="error404" class="hidden">
+        <div class="error-container">
+            <div class="error-hero">
+                <div class="error-text">
+                    <h1>404</h1>
+                    <h2>Ошибка</h2>
+                    <p>Страница, которую вы ищете, не существует или была перемещена.</p>
+                    <a href="#" class="btn-home" onclick="showMainPage(); return false;">Перейти на главную страницу</a>
+                </div>
+                <div class="error-image">
+                    <img src="image/image 43.png" alt="Герой" class="char">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ==== ПЕРЕКЛЮЧЕНИЕ МЕЖДУ СТРАНИЦАМИ ====
+        function showMainPage() {
+            document.getElementById('hero-section').classList.remove('hidden');
+            document.getElementById('main-page').classList.remove('hidden');
+            document.getElementById('error404').classList.add('hidden');
+            document.body.classList.remove('error-bg');
+            document.body.classList.add('main-bg');
+            
+            // Показываем декор основной страницы
+            document.querySelectorAll('.svg-shape').forEach(el => el.classList.remove('hidden'));
+            document.querySelectorAll('.triangle, .circle').forEach(el => el.classList.add('hidden'));
+            
+            // Показываем верхнюю навигацию
+            document.getElementById('top-header').classList.remove('hidden');
+            
+            // Обновляем активные пункты меню
+            updateActiveSection();
+            
+            // Прокручиваем наверх
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function show404Page() {
+            document.getElementById('hero-section').classList.add('hidden');
+            document.getElementById('main-page').classList.add('hidden');
+            document.getElementById('error404').classList.remove('hidden');
+            document.body.classList.remove('main-bg');
+            document.body.classList.add('error-bg');
+            
+            // Показываем декор страницы 404
+            document.querySelectorAll('.svg-shape').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.triangle, .circle').forEach(el => el.classList.remove('hidden'));
+            
+            // Скрываем верхнюю навигацию
+            document.getElementById('top-header').classList.add('hidden');
+            
+            // Прокручиваем наверх
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ==== НАВИГАЦИЯ ====
+        function scrollToHero() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ==== КАРУСЕЛЬ В СЕКЦИИ ВОЗМОЖНОСТЕЙ ====
+        const cardStates = [
+            { currentIndex: 0, totalItems: 4 }, // Пользователи
+            { currentIndex: 0, totalItems: 3 }, // Организации  
+            { currentIndex: 0, totalItems: 3 }, // Команды и клубы
+            { currentIndex: 0, totalItems: 3 }  // Арены
+        ];
+
+        function updateCard(cardIndex) {
+            const cards = document.querySelectorAll('#capabilities .capability-card');
+            if (!cards[cardIndex]) return;
+            
+            const contents = cards[cardIndex].querySelectorAll('.card-content');
+            const currentIndex = cardStates[cardIndex].currentIndex;
+            
+            contents.forEach((content, index) => {
+                content.classList.toggle('active', index === currentIndex);
+            });
+            
+            updateIndicators(cardIndex);
+            updateButtons(cardIndex);
+        }
+
+        function updateIndicators(cardIndex) {
+            const indicatorsContainer = document.getElementById(`indicators-${cardIndex}`);
+            if (!indicatorsContainer) return;
+            
+            const state = cardStates[cardIndex];
+            indicatorsContainer.innerHTML = '';
+            
+            for (let i = 0; i < state.totalItems; i++) {
+                const indicator = document.createElement('span');
+                indicator.className = `card-indicator ${i === state.currentIndex ? 'active' : ''}`;
+                indicator.onclick = () => {
+                    cardStates[cardIndex].currentIndex = i;
+                    updateCard(cardIndex);
+                };
+                indicatorsContainer.appendChild(indicator);
+            }
+        }
+
+        function updateButtons(cardIndex) {
+            const cards = document.querySelectorAll('#capabilities .capability-card');
+            if (!cards[cardIndex]) return;
+            
+            const prevBtn = cards[cardIndex].querySelector('.card-nav-btn:first-child');
+            const nextBtn = cards[cardIndex].querySelector('.card-nav-btn:last-child');
+            const state = cardStates[cardIndex];
+            
+            if (prevBtn) prevBtn.disabled = state.currentIndex === 0;
+            if (nextBtn) nextBtn.disabled = state.currentIndex === state.totalItems - 1;
+        }
+
+        function nextCard(cardIndex) {
+            const state = cardStates[cardIndex];
+            if (state.currentIndex < state.totalItems - 1) {
+                state.currentIndex++;
+                updateCard(cardIndex);
+            }
+        }
+
+        function prevCard(cardIndex) {
+            const state = cardStates[cardIndex];
+            if (state.currentIndex > 0) {
+                state.currentIndex--;
+                updateCard(cardIndex);
+            }
+        }
+
+        // Инициализация карточек
+        window.addEventListener('load', () => {
+            cardStates.forEach((_, index) => {
+                updateIndicators(index);
+                updateCard(index);
+            });
+        });
+
+        // ==== БОКОВЫЕ ТОЧКИ НАВИГАЦИИ ====
+        const sections = document.querySelectorAll('#main-page section');
+        const dots = document.querySelectorAll('.dot');
+        const navLinks = document.querySelectorAll('#fixed-nav .nav-link');
+
+        function updateActiveSection() {
+            // Если показывается страница 404, не обновляем навигацию
+            if (document.getElementById('error404').classList.contains('hidden')) {
+                let current = '';
+                
+                // Проверяем, видим ли мы герой-секцию
+                const heroSection = document.getElementById('hero-section');
+                const heroTop = heroSection.offsetTop;
+                const heroHeight = heroSection.clientHeight;
+                
+                if (window.scrollY < heroTop + heroHeight - 100) {
+                    // Мы еще в герой-секции
+                    current = 'hero';
+                } else {
+                    // Проверяем основные секции
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.clientHeight;
+                        
+                        if (window.scrollY >= (sectionTop - 300)) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+                }
+
+                // Обновляем точки
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                if (current === 'hero') {
+                    dots[0].classList.add('active');
+                    updateNavLink('hero');
+                } else if (current === 'advantages') {
+                    dots[0].classList.add('active');
+                    updateNavLink(0);
+                } else if (current === 'capabilities') {
+                    dots[1].classList.add('active');
+                    updateNavLink(1);
+                } else if (current === 'faq') {
+                    dots[2].classList.add('active');
+                    updateNavLink(2);
+                }
+            }
+        }
+
+        function updateNavLink(index) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            if (index === 'hero') {
+                // Активируем ссылку на главную
+                navLinks[0].classList.add('active');
+            } else if (index < 3) {
+                navLinks[index + 1].classList.add('active'); // +1 потому что первая ссылка - главная
+            }
+        }
+
+        function scrollToSection(index) {
+            if (index === 0) {
+                window.scrollTo({ top: sections[0].offsetTop, behavior: 'smooth' });
+            } else if (index === 1) {
+                window.scrollTo({ top: sections[1].offsetTop, behavior: 'smooth' });
+            } else if (index === 2) {
+                window.scrollTo({ top: sections[2].offsetTop, behavior: 'smooth' });
+            }
+        }
+
+        // Назначаем клики по точкам
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                if (index === 0) {
+                    // Первая точка ведет или к герою или к преимуществам
+                    if (window.scrollY < 100) {
+                        scrollToSection(0);
+                    } else {
+                        const heroSection = document.getElementById('hero-section');
+                        const heroTop = heroSection.offsetTop;
+                        if (window.scrollY > heroTop + 500) {
+                            scrollToSection(0);
+                        } else {
+                            scrollToHero();
+                        }
+                    }
+                } else {
+                    scrollToSection(index - 1);
+                }
+            });
+        });
+
+        // Обновляем активную секцию при скролле
+        window.addEventListener('scroll', updateActiveSection);
+        window.addEventListener('load', updateActiveSection);
+
+        // Клик по подсказке скролла в FAQ для возврата наверх
+        document.querySelectorAll('.scroll-hint').forEach((hint, index) => {
+            if (index === 2) { // Последняя подсказка (в FAQ)
+                hint.style.cursor = 'pointer';
+                hint.addEventListener('click', () => {
+                    scrollToHero();
+                });
+            }
+        });
+
+        // Проверяем URL на наличие параметра для показа страницы 404
+        window.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('page') === '404') {
+                show404Page();
+            }
+        });
+
+        // ==== МОДАЛЬНЫЕ ОКНА ВХОДА И РЕГИСТРАЦИИ ====
+        // Создаем модальные окна динамически
+        function createAuthModals() {
+            const modalHTML = `
+            <!-- Модальное окно входа -->
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content auth-modal">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel">Вход в METASPHERE</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email или имя пользователя</label>
+                                    <input type="text" class="form-control auth-input" id="loginEmail" placeholder="Введите ваш email или имя" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Пароль</label>
+                                    <input type="password" class="form-control auth-input" id="loginPassword" placeholder="Введите пароль" required>
+                                    <div class="form-text text-end">
+                                        <a href="#" class="forgot-password">Забыли пароль?</a>
+                                    </div>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Запомнить меня</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 auth-submit-btn">Войти</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <p class="mb-0">Нет аккаунта? <a href="#" class="switch-to-register" data-bs-dismiss="modal">Зарегистрироваться</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Модальное окно регистрации -->
+            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content auth-modal">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="registerModalLabel">Регистрация в METASPHERE</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="registerForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">Имя</label>
+                                        <input type="text" class="form-control auth-input" id="firstName" placeholder="Введите имя" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Фамилия</label>
+                                        <input type="text" class="form-control auth-input" id="lastName" placeholder="Введите фамилию" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Имя пользователя</label>
+                                    <input type="text" class="form-control auth-input" id="username" placeholder="Придумайте имя пользователя" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control auth-input" id="registerEmail" placeholder="Введите ваш email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="registerPassword" class="form-label">Пароль</label>
+                                    <input type="password" class="form-control auth-input" id="registerPassword" placeholder="Придумайте пароль" required>
+                                    <div class="form-text">Минимум 8 символов</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Подтвердите пароль</label>
+                                    <input type="password" class="form-control auth-input" id="confirmPassword" placeholder="Повторите пароль" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="acceptTerms" required>
+                                    <label class="form-check-label" for="acceptTerms">
+                                        Я принимаю <a href="#" class="terms-link">условия использования</a> и <a href="#" class="terms-link">политику конфиденциальности</a>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 auth-submit-btn">Зарегистрироваться</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <p class="mb-0">Уже есть аккаунт? <a href="#" class="switch-to-login" data-bs-dismiss="modal">Войти</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+        }
+
+        // Уведомления
+        function showNotification(title, message, type = 'success') {
+            // Удаляем старое уведомление
+            const oldNotification = document.querySelector('.auth-notification');
+            if (oldNotification) oldNotification.remove();
+            
+            const notification = document.createElement('div');
+            notification.className = `auth-notification notification-${type}`;
+            notification.innerHTML = `
+                <div class="notification-title">${title}</div>
+                <div class="notification-message">${message}</div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Показываем уведомление
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            // Скрываем через 5 секунд
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.remove();
+                    }
+                }, 500);
+            }, 5000);
+        }
+
+        // Обработка формы входа
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Валидация
+            if (!email || !password) {
+                showNotification('Ошибка', 'Заполните все поля', 'error');
+                return;
+            }
+            
+            // Здесь будет реальная логика авторизации
+            // Для демо просто показываем успешное сообщение
+            showNotification('Успешный вход', 'Добро пожаловать в METASPHERE!');
+            
+            // Закрываем модальное окно
+            const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            loginModal.hide();
+            
+            // Обновляем кнопку входа на кнопку профиля
+            updateAuthButton('Выйти');
+            
+            // Очищаем форму
+            document.getElementById('loginForm').reset();
+        }
+
+        // Обработка формы регистрации
+        function handleRegister(event) {
+            event.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Валидация
+            if (!firstName || !lastName || !username || !email || !password || !confirmPassword) {
+                showNotification('Ошибка', 'Заполните все поля', 'error');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                showNotification('Ошибка', 'Пароли не совпадают', 'error');
+                return;
+            }
+            
+            if (password.length < 8) {
+                showNotification('Ошибка', 'Пароль должен быть минимум 8 символов', 'error');
+                return;
+            }
+            
+            if (!document.getElementById('acceptTerms').checked) {
+                showNotification('Ошибка', 'Примите условия использования', 'error');
+                return;
+            }
+            
+            // Здесь будет реальная логика регистрации
+            // Для демо просто показываем успешное сообщение
+            showNotification('Регистрация успешна', `Добро пожаловать, ${firstName}! На ваш email отправлено письмо для подтверждения.`);
+            
+            // Закрываем модальное окно
+            const registerModal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+            registerModal.hide();
+            
+            // Переключаем на форму входа
+            setTimeout(() => {
+                const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                loginModal.show();
+            }, 1000);
+            
+            // Очищаем форму
+            document.getElementById('registerForm').reset();
+        }
+
+        // Обновление кнопки авторизации
+        function updateAuthButton(text) {
+            // Обновляем все кнопки входа
+            document.querySelectorAll('.btn-login').forEach(btn => {
+                btn.textContent = text;
+                if (text === 'Выйти') {
+                    btn.onclick = handleLogout;
+                } else {
+                    btn.onclick = (e) => {
+                        e.preventDefault();
+                        const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                        loginModal.show();
+                    };
+                }
+            });
+        }
+
+        // Выход из системы
+        function handleLogout() {
+            // Здесь будет реальная логика выхода
+            showNotification('Выход', 'Вы успешно вышли из системы');
+            updateAuthButton('Войти');
+            return false;
+        }
+
+        // Переключение между модальными окнами
+        function setupModalSwitchers() {
+            // Из регистрации ко входу
+            document.querySelectorAll('.switch-to-login').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                    loginModal.show();
+                });
+            });
+            
+            // Из входа к регистрации
+            document.querySelectorAll('.switch-to-register').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+                    registerModal.show();
+                });
+            });
+        }
+
+        // Инициализация системы авторизации
+        function initAuthSystem() {
+            // Создаем модальные окна
+            createAuthModals();
+            
+            // Назначаем обработчики кнопкам входа (верхняя навигация)
+            document.querySelectorAll('#top-header .btn-login').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                    loginModal.show();
+                });
+            });
+            
+            // Назначаем обработчики кнопкам регистрации (верхняя навигация)
+            document.querySelectorAll('#top-header .btn-reg').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+                    registerModal.show();
+                });
+            });
+            
+            // Назначаем обработчики кнопкам входа (фиксированная навигация)
+            document.querySelectorAll('#fixed-nav .btn-login').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                    loginModal.show();
+                });
+            });
+            
+            // Назначаем обработчики кнопкам регистрации (фиксированная навигация)
+            document.querySelectorAll('#fixed-nav .btn-register').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+                    registerModal.show();
+                });
+            });
+            
+            // Назначаем обработчики кнопкам на главной странице
+            document.querySelectorAll('.btn-main, .btn-outline').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+                    registerModal.show();
+                });
+            });
+            
+            // Назначаем обработчики форм
+            document.addEventListener('submit', (e) => {
+                if (e.target.id === 'loginForm') {
+                    handleLogin(e);
+                } else if (e.target.id === 'registerForm') {
+                    handleRegister(e);
+                }
+            });
+            
+            // Настраиваем переключение между модалками
+            setupModalSwitchers();
+            
+            // Инициализируем восстановление пароля (демо)
+            document.addEventListener('click', (e) => {
+                if (e.target.classList.contains('forgot-password')) {
+                    e.preventDefault();
+                    showNotification('Восстановление пароля', 'На ваш email отправлена инструкция по восстановлению пароля');
+                }
+            });
+        }
+
+        // Запускаем систему авторизации после загрузки страницы
+        document.addEventListener('DOMContentLoaded', initAuthSystem);
+    </script>
+</body>
+</html>
